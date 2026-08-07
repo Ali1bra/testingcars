@@ -1,0 +1,15 @@
+{
+  "brand": "bmw",
+  "model": "525d",
+  "year": 2009,
+  "price": 100,
+  "km": 200,
+  "fuel": "Diesel",
+  "gearbox": "Automatisk",
+  "description": "Super fed bil bla bla",
+  "images": [
+    "/images/cars/fade.jpg",
+    "/images/cars/gangnum.jpg"
+  ],
+  "sold": false
+}
