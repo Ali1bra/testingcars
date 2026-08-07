@@ -1,4 +1,6 @@
-media: images
+media:
+  input: images/cars
+  output: /images/cars
 
 content:
   - name: cars
@@ -11,7 +13,17 @@ content:
 
     view:
       primary: model
-      fields: [brand, model, year, price]
+      fields:
+        - brand
+        - model
+        - year
+        - price
+        - sold
+      sort:
+        - brand
+        - model
+        - year
+        - price
 
     fields:
       - name: brand
@@ -23,6 +35,10 @@ content:
         label: Model
         type: string
         required: true
+
+      - name: variant
+        label: Variant
+        type: string
 
       - name: year
         label: Årgang
@@ -37,3 +53,46 @@ content:
       - name: km
         label: Kilometer
         type: number
+        required: true
+
+      - name: fuel
+        label: Brændstof
+        type: select
+        options:
+          values:
+            - Benzin
+            - Diesel
+            - El
+            - Hybrid
+            - Plug-in hybrid
+
+      - name: gearbox
+        label: Gearkasse
+        type: select
+        options:
+          values:
+            - Manuel
+            - Automatisk
+
+      - name: description
+        label: Beskrivelse
+        type: text
+
+      - name: images
+        label: Billeder
+        type: image
+        required: true
+        options:
+          multiple:
+            max: 12
+          unique: true
+          extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
+          rename: true
+
+      - name: sold
+        label: Solgt
+        type: boolean
