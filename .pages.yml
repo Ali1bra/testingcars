@@ -1,0 +1,39 @@
+media: images
+
+content:
+  - name: cars
+    label: Biler
+    type: collection
+    path: cars
+    format: json
+
+    filename: "{brand}-{model}-{year}.json"
+
+    view:
+      primary: model
+      fields: [brand, model, year, price]
+
+    fields:
+      - name: brand
+        label: Mærke
+        type: string
+        required: true
+
+      - name: model
+        label: Model
+        type: string
+        required: true
+
+      - name: year
+        label: Årgang
+        type: number
+        required: true
+
+      - name: price
+        label: Pris
+        type: number
+        required: true
+
+      - name: km
+        label: Kilometer
+        type: number
